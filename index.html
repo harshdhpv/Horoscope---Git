@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Horoscope - Deccan Herald</title>
+    <!-- Font link for Roboto Slab is already included in the original file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --dh-teal: #00a0b0;
@@ -17,7 +21,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            /* FIX: Changed font-family to Roboto Slab for the entire website */
+            font-family: 'Roboto Slab', serif;
         }
         
         body {
@@ -626,8 +631,11 @@
             .logo span { font-size: 11px; } 
             .logo { margin-right: 20px; }
             .header-center-nav { display: flex; } 
-            .header-center-nav li a { font-size: 15px; padding: 10px 6px;}
-            .header-center-nav li:not(:last-child)::after { margin: 0 10px; font-size: 15px; }
+            
+            /* FIX: Adjusted font-size and margin to prevent layout breaking with Roboto Slab font */
+            .header-center-nav li a { font-size: 14px; padding: 10px 6px;}
+            .header-center-nav li:not(:last-child)::after { margin: 0 8px; font-size: 14px; }
+            
             .header-right-top-links, .header-right-bottom-actions { gap: 12px; }
             .header-link-desktop { display: inline-block; font-size: 13px; }
             .header-icon-mobile { display: none; }
